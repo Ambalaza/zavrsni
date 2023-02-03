@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="project classroom front-end beginner course">
+    <meta name="keywords" content="HTML CSS beginner course final project">
+    <meta name="author" content="Kristina Balazevic">
+
+    <title>Animal Adoption Center</title>
+
+    <link rel="stylesheet" href="aac-novo.css">
+</head>
+<body>
+    <header class="header" id="home">
+        <div class="header-bar">
+            <img class="logo-img" src="images/logos/logo.png" alt="AAC-logo" height="150" width="150">
+            <nav class="nav">
+                <h1 class="h1">Animal Adoption Center</h1>
+                <ul class="nav-list">
+                    <li class="nav-list-item">
+                        <a href="#home">Home</a>
+                    </li>
+                    <li class="nav-list-item" onclick="onNavChange( 'animals' )">
+                        <a href="#animals">Animals</a>
+                    </li>
+                    <li class="nav-list-item" onclick="onNavChange( 'donations')">
+                        <a href="#donations">Donations</a>
+                    </li>
+                    <li class="nav-list-item" onclick="onNavChange( 'about-us' )">
+                        <a href="#about-us">About us</a>
+                    </li>
+                    <li class="nav-list-item" onclick="onNavChange( 'contact' ) ">
+                        <a href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="home">
+            <h2 class="h2">Find your new <span>best friend!</span></h2>
+            <div class="txt">
+                <p>
+                    Every year, approximately 6.5 million pets enter animal shelters nationwide, and 1.5 million become euthanized. And with the current shelter crisis, numbers are on the rise. But you can help!
+                </p>
+                <p>
+                    Not only are pets scientifically proven to reduce stress levels, but no one can offer the unconditional love and companionship a pet can.
+                </p>
+                <p class="terracotta fw-700">
+                    Save a life and get a companion of a lifetime!
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="our-animals" id="animals">
+            <h2 class="h2">Our animals</h2>
+            <div class="gallery-container">
+                <div class="gallery txt">
+                    <img src="images/cat.webp" alt="cat named Apple">
+                    <h3 class="h3">Animals for adoption</h3>
+                    <p>Meet our fosters.</p>
+                </div>
+                <div class="gallery txt">
+                    <img src="images/mico.webp" alt="cat named Mico">
+                    <h3 class="h3">Adopted pets</h3>
+                    <p>Updates on adopted animals.</p>
+                </div>
+                <div class="gallery txt">
+                    <img src="images/event.webp" alt="event">
+                    <img src="images/shelter.webp" alt="shelter">
+                    <h3 class="h3">Events</h3>
+                    <p>
+                        Visit our events where you get to meet and play with our fosters. You can also join our educational workshops.
+                    </p>
+                    <a class="read-more" href="">Read more...</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="container" id="donations">
+            <div class="txt-container">
+                <h2 class="h2">Donations</h2>
+                <div class="txt-center fs-24">
+                    <p>
+                        Animal Adoption Center is a nonprofit animal rescue organization. Your gift directly supports our rescue and adoption programs, educational initiatives, and our spay/neuter program.
+                    </p>
+                    <p>
+                        Donate and help us. With every donation you get a little gift as a thank you.
+                    </p>
+                </div>
+            </div>
+            <div class="form-container">
+                <form action="" method="get" class="form">
+                    <div>
+                        <label  class="fw-700" for="fname">First name:</label>
+                        <input class="w100" type="text" name="first-name" id="fname" placeholder="Enter your name">
+                    </div>
+                    <div>
+                        <label class="fw-700" for="email">Email:</label>
+                        <input class="w100" type="email" name="email" id="email" placeholder="Enter your email">
+                    </div>
+                    <div>
+                        <label class="fw-700" for="donation-amount">Donation amount ($):</label>
+                        <input class="w100" type="number" name="amount" id="donation-amount" min="1" max="100" value="10">
+                    </div>
+                    <div>
+                        <label class="fw-700" for="gift-selection">Choose a gift for your pet:</label>
+                        <select class="w100" name="gift-selection" id="gift-selection">
+                            <option value="gift" selected disabled>Gift</option>
+                            <option value="catnip">Catnip</option>
+                            <option value="dog-chew-toy">Dog chew toy</option>
+                            <option value="surprise">Surprise me</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="fw-700">Would you like to donate monthly?</label>
+                        <div>
+                            <input class="ml-1" type="radio" name="option" id="yes" value="yes">
+                            <label class="inline-block-lbl ml-1" for="yes">Yes, I would like to donate monthly.</label>
+                        </div>
+                        <div>
+                            <input class="ml-1" type="radio" name="option" id="no" value="no">
+                            <label class="inline-block-lbl ml-1" for="no">No, I would like to donate once.</label>
+                        </div>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="fee">
+                        <label class="inline-block-lbl fw-700" for="fee">I would like to cover payment fee.</label>
+                    </div>
+                    <div>
+                        <button class="btn fw-700" type="submit">Send</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <section class="about-us" id="about-us">
+            <h2 class="h2">About us</h2>
+            <div class="grid">
+                <div>
+                    <div class="txt">
+                        <p>
+                            Animal Adoption Center is a nonprofit animal rescue organization. We are team of veterinarians and volunteers, dedicated to help the ones in need.
+                        </p>
+                        <p>
+                            Our mission is saving the lives of homeless animals through rescue, adoption, education and spay/neuter.
+                        </p>
+                    </div>
+                    <img src="images/dog.webp" alt="dog">
+                </div>
+                <img src="images/vets.webp" alt="veterinarians">
+            </div>
+        </section>
+    </main>
+    
+    <footer class="footer" id="contact">
+        <img src="images/logos/logo.png" alt="AAC-logo" height="100" width="100">
+        <div class="txt contact">
+            <p><span class="fw-700 brown">Address:</span> Lorem ipsum dolor sit.</p>
+            <p><span class="fw-700 brown">Telephone:</span> <a href="652149531">652149531</a></p>
+            <p><span class="fw-700 brown">Emmergency telephone:</span> <a href="5145456454">5145456454</a></p>
+            <p><span class="fw-700 brown">Hours:</span> Mon-Fri 8am-16pm</p>
+        </div>
+        <div class="txt-center">
+            <p>
+                &copy; Animal Adoption Center ~ All Rights Reserved
+            </p>
+            <p>
+                Author: Balazevic Kristina
+            </p>
+        </div>
+        <div class="social-media">
+            <ul>
+                <li>
+                    <a href=""><img src="images/logos/email-logo.svg" alt="email logo"></a>
+                </li>
+                <li>
+                    <a href=""><img src="images/logos/insta-logo.svg" alt="insta logo"></a>
+                </li>
+                <li>
+                    <a href=""><img src="images/logos/twitter-logo.svg" alt="twitter logo"></a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
